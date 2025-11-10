@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ES" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Variables en Python &mdash; documentación de SOLORZANO - 1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=e07c9db6"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SOLORZANO
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Variables en Python</a><ul>
+<li><a class="reference internal" href="#que-es-una-variable">¿Qué es una variable?</a></li>
+<li><a class="reference internal" href="#crear-variables">Crear variables</a></li>
+<li><a class="reference internal" href="#tipos-de-datos-basicos">Tipos de datos básicos</a></li>
+<li><a class="reference internal" href="#operaciones-con-variables">Operaciones con variables</a></li>
+<li><a class="reference internal" href="#ejercicios">Ejercicios</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SOLORZANO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Variables en Python</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Modulos/variables.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="variables-en-python">
+<h1>Variables en Python<a class="headerlink" href="#variables-en-python" title="Link to this heading"></a></h1>
+<section id="que-es-una-variable">
+<h2>¿Qué es una variable?<a class="headerlink" href="#que-es-una-variable" title="Link to this heading"></a></h2>
+<p>Una <em>variable</em> es un contenedor que almacena un valor en la memoria de tu computadora.</p>
+<p>Piensa en una variable como una caja con una etiqueta:
+- La etiqueta es el <em>nombre de la variable</em>
+- El contenido es el <em>valor</em></p>
+</section>
+<section id="crear-variables">
+<h2>Crear variables<a class="headerlink" href="#crear-variables" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Juan&quot;</span>
+<span class="n">edad</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">altura</span> <span class="o">=</span> <span class="mf">1.75</span>
+<span class="n">es_estudiante</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="tipos-de-datos-basicos">
+<h2>Tipos de datos básicos<a class="headerlink" href="#tipos-de-datos-basicos" title="Link to this heading"></a></h2>
+<p><em>String (texto):</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pais</span> <span class="o">=</span> <span class="s2">&quot;Argentina&quot;</span>
+<span class="n">mensaje</span> <span class="o">=</span> <span class="s2">&quot;Hola, mundo&quot;</span>
+</pre></div>
+</div>
+<p><em>Integer (números enteros):</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numero</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">negativo</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
+</pre></div>
+</div>
+<p><em>Float (números decimales):</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159</span>
+<span class="n">temperatura</span> <span class="o">=</span> <span class="mf">25.5</span>
+</pre></div>
+</div>
+<p><em>Boolean (verdadero/falso):</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">verdadero</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">falso</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</section>
+<section id="operaciones-con-variables">
+<h2>Operaciones con variables<a class="headerlink" href="#operaciones-con-variables" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Suma</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">suma</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">suma</span><span class="p">)</span>  <span class="c1"># 15</span>
+
+<span class="c1"># Concatenación de strings</span>
+<span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Juan&quot;</span>
+<span class="n">apellido</span> <span class="o">=</span> <span class="s2">&quot;Pérez&quot;</span>
+<span class="n">nombre_completo</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">apellido</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nombre_completo</span><span class="p">)</span>  <span class="c1"># Juan Pérez</span>
+</pre></div>
+</div>
+</section>
+<section id="ejercicios">
+<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Crea una variable con tu nombre y otra con tu edad</p></li>
+<li><p>Crea dos números y suma los resultados</p></li>
+<li><p>Crea una variable con tu ciudad y otra con tu país, luego concatenálas</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2025, BELLIDO.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

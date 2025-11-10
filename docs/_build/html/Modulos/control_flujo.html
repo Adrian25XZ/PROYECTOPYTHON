@@ -1,0 +1,189 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ES" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control de Flujo &mdash; documentación de SOLORZANO - 1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=e07c9db6"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SOLORZANO
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Control de Flujo</a><ul>
+<li><a class="reference internal" href="#que-es-el-control-de-flujo">¿Qué es el control de flujo?</a></li>
+<li><a class="reference internal" href="#condicionales-if-else">Condicionales (if/else)</a></li>
+<li><a class="reference internal" href="#multiples-condiciones-elif">Múltiples condiciones (elif)</a></li>
+<li><a class="reference internal" href="#operadores-de-comparacion">Operadores de comparación</a></li>
+<li><a class="reference internal" href="#bucle-for">Bucle for</a></li>
+<li><a class="reference internal" href="#bucle-while">Bucle while</a></li>
+<li><a class="reference internal" href="#ejercicios">Ejercicios</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SOLORZANO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Control de Flujo</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Modulos/control_flujo.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="control-de-flujo">
+<h1>Control de Flujo<a class="headerlink" href="#control-de-flujo" title="Link to this heading"></a></h1>
+<section id="que-es-el-control-de-flujo">
+<h2>¿Qué es el control de flujo?<a class="headerlink" href="#que-es-el-control-de-flujo" title="Link to this heading"></a></h2>
+<p>El <em>control de flujo</em> permite que tu programa tome decisiones y repita acciones.</p>
+<p>Hay dos estructuras principales: <em>if/else</em> y <em>bucles</em>.</p>
+</section>
+<section id="condicionales-if-else">
+<h2>Condicionales (if/else)<a class="headerlink" href="#condicionales-if-else" title="Link to this heading"></a></h2>
+<p>La estructura <em>if/else</em> ejecuta código según una condición:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">edad</span> <span class="o">=</span> <span class="mi">18</span>
+
+<span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eres mayor de edad&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eres menor de edad&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="multiples-condiciones-elif">
+<h2>Múltiples condiciones (elif)<a class="headerlink" href="#multiples-condiciones-elif" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">calificacion</span> <span class="o">=</span> <span class="mi">85</span>
+
+<span class="k">if</span> <span class="n">calificacion</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Excelente&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">calificacion</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Muy bien&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">calificacion</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bien&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Necesitas estudiar más&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="operadores-de-comparacion">
+<h2>Operadores de comparación<a class="headerlink" href="#operadores-de-comparacion" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">==</span>  <span class="c1"># igual</span>
+<span class="o">!=</span>  <span class="c1"># no igual</span>
+<span class="o">&gt;</span>   <span class="c1"># mayor que</span>
+<span class="o">&lt;</span>   <span class="c1"># menor que</span>
+<span class="o">&gt;=</span>  <span class="c1"># mayor o igual</span>
+<span class="o">&lt;=</span>  <span class="c1"># menor o igual</span>
+</pre></div>
+</div>
+</section>
+<section id="bucle-for">
+<h2>Bucle for<a class="headerlink" href="#bucle-for" title="Link to this heading"></a></h2>
+<p>Repite código una cantidad definida de veces:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>  <span class="c1"># Imprime 0, 1, 2, 3, 4</span>
+</pre></div>
+</div>
+<p>Recorrer una lista con for:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeros</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="bucle-while">
+<h2>Bucle while<a class="headerlink" href="#bucle-while" title="Link to this heading"></a></h2>
+<p>Repite código mientras se cumpla una condición:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">contador</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">contador</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">contador</span><span class="p">)</span>
+    <span class="n">contador</span> <span class="o">=</span> <span class="n">contador</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</section>
+<section id="ejercicios">
+<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Crea un programa que pida la edad y diga si es mayor de edad</p></li>
+<li><p>Crea un bucle que imprima los números del 1 al 10</p></li>
+<li><p>Crea un bucle que imprima la tabla de multiplicar del 5</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2025, BELLIDO.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

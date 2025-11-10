@@ -1,0 +1,183 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ES" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estructuras de Datos &mdash; documentación de SOLORZANO - 1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=e07c9db6"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SOLORZANO
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Estructuras de Datos</a><ul>
+<li><a class="reference internal" href="#que-es-una-estructura-de-datos">¿Qué es una estructura de datos?</a></li>
+<li><a class="reference internal" href="#listas">Listas</a></li>
+<li><a class="reference internal" href="#tuplas">Tuplas</a></li>
+<li><a class="reference internal" href="#diccionarios">Diccionarios</a></li>
+<li><a class="reference internal" href="#ejercicios">Ejercicios</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SOLORZANO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Estructuras de Datos</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Modulos/estructura_datos.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="estructuras-de-datos">
+<h1>Estructuras de Datos<a class="headerlink" href="#estructuras-de-datos" title="Link to this heading"></a></h1>
+<section id="que-es-una-estructura-de-datos">
+<h2>¿Qué es una estructura de datos?<a class="headerlink" href="#que-es-una-estructura-de-datos" title="Link to this heading"></a></h2>
+<p>Una <em>estructura de datos</em> es una forma de organizar múltiples valores en una sola variable.</p>
+<p>Python tiene varias estructuras principales: <em>listas, tuplas y diccionarios</em>.</p>
+</section>
+<section id="listas">
+<h2>Listas<a class="headerlink" href="#listas" title="Link to this heading"></a></h2>
+<p>Una <em>lista</em> es una colección ordenada de elementos que puede modificarse:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">frutas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;naranja&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">frutas</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># manzana</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">frutas</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># banana</span>
+</pre></div>
+</div>
+<p>Agregar elementos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">frutas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">]</span>
+<span class="n">frutas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;naranja&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">frutas</span><span class="p">)</span>  <span class="c1"># [&#39;manzana&#39;, &#39;banana&#39;, &#39;naranja&#39;]</span>
+</pre></div>
+</div>
+<p>Recorrer una lista:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">frutas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;naranja&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">fruta</span> <span class="ow">in</span> <span class="n">frutas</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fruta</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="tuplas">
+<h2>Tuplas<a class="headerlink" href="#tuplas" title="Link to this heading"></a></h2>
+<p>Una <em>tupla</em> es similar a una lista, pero NO se puede modificar:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">colores</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;rojo&quot;</span><span class="p">,</span> <span class="s2">&quot;verde&quot;</span><span class="p">,</span> <span class="s2">&quot;azul&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">colores</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># rojo</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">colores</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># verde</span>
+</pre></div>
+</div>
+</section>
+<section id="diccionarios">
+<h2>Diccionarios<a class="headerlink" href="#diccionarios" title="Link to this heading"></a></h2>
+<p>Un <em>diccionario</em> almacena pares de clave-valor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">persona</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Juan&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;edad&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="s2">&quot;ciudad&quot;</span><span class="p">:</span> <span class="s2">&quot;Buenos Aires&quot;</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">persona</span><span class="p">[</span><span class="s2">&quot;nombre&quot;</span><span class="p">])</span>  <span class="c1"># Juan</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">persona</span><span class="p">[</span><span class="s2">&quot;edad&quot;</span><span class="p">])</span>    <span class="c1"># 20</span>
+</pre></div>
+</div>
+<p>Agregar elementos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">persona</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Juan&quot;</span><span class="p">}</span>
+<span class="n">persona</span><span class="p">[</span><span class="s2">&quot;edad&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">persona</span><span class="p">[</span><span class="s2">&quot;ciudad&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Buenos Aires&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">persona</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Recorrer un diccionario:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">persona</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="s2">&quot;edad&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;ciudad&quot;</span><span class="p">:</span> <span class="s2">&quot;Buenos Aires&quot;</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">clave</span><span class="p">,</span> <span class="n">valor</span> <span class="ow">in</span> <span class="n">persona</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">clave</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">valor</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="ejercicios">
+<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Crea una lista con 5 números y imprime el primero y el último</p></li>
+<li><p>Crea un diccionario con tus datos personales (nombre, edad, ciudad)</p></li>
+<li><p>Crea una lista de estudiantes y agrega 2 más</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2025, BELLIDO.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ES" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funciones en Python &mdash; documentación de SOLORZANO - 1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=e07c9db6"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SOLORZANO
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Funciones en Python</a><ul>
+<li><a class="reference internal" href="#que-es-una-funcion">¿Qué es una función?</a></li>
+<li><a class="reference internal" href="#crear-una-funcion">Crear una función</a></li>
+<li><a class="reference internal" href="#funciones-con-parametros">Funciones con parámetros</a></li>
+<li><a class="reference internal" href="#funciones-con-retorno">Funciones con retorno</a></li>
+<li><a class="reference internal" href="#multiples-parametros">Múltiples parámetros</a></li>
+<li><a class="reference internal" href="#ejercicios">Ejercicios</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SOLORZANO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Funciones en Python</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Modulos/funciones.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="funciones-en-python">
+<h1>Funciones en Python<a class="headerlink" href="#funciones-en-python" title="Link to this heading"></a></h1>
+<section id="que-es-una-funcion">
+<h2>¿Qué es una función?<a class="headerlink" href="#que-es-una-funcion" title="Link to this heading"></a></h2>
+<p>Una <em>función</em> es un bloque de código reutilizable que realiza una tarea específica.</p>
+<p>Imagina que escribes el mismo código muchas veces. Una función te permite escribirlo una sola vez
+y usarlo cuantas veces necesites.</p>
+</section>
+<section id="crear-una-funcion">
+<h2>Crear una función<a class="headerlink" href="#crear-una-funcion" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">saludar</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Hola, bienvenido a Python!&quot;</span><span class="p">)</span>
+
+<span class="n">saludar</span><span class="p">()</span>  <span class="c1"># Ejecuta la función</span>
+</pre></div>
+</div>
+</section>
+<section id="funciones-con-parametros">
+<h2>Funciones con parámetros<a class="headerlink" href="#funciones-con-parametros" title="Link to this heading"></a></h2>
+<p>Los <em>parámetros</em> son valores que pasa a la función:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;¡Hola, </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+
+<span class="n">saludar</span><span class="p">(</span><span class="s2">&quot;Juan&quot;</span><span class="p">)</span>
+<span class="n">saludar</span><span class="p">(</span><span class="s2">&quot;María&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="funciones-con-retorno">
+<h2>Funciones con retorno<a class="headerlink" href="#funciones-con-retorno" title="Link to this heading"></a></h2>
+<p>Una función puede <em>devolver</em> un valor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">resultado</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">resultado</span>
+
+<span class="n">suma</span> <span class="o">=</span> <span class="n">sumar</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">suma</span><span class="p">)</span>  <span class="c1"># 8</span>
+</pre></div>
+</div>
+</section>
+<section id="multiples-parametros">
+<h2>Múltiples parámetros<a class="headerlink" href="#multiples-parametros" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calcular_promedio</span><span class="p">(</span><span class="n">nota1</span><span class="p">,</span> <span class="n">nota2</span><span class="p">,</span> <span class="n">nota3</span><span class="p">):</span>
+    <span class="n">promedio</span> <span class="o">=</span> <span class="p">(</span><span class="n">nota1</span> <span class="o">+</span> <span class="n">nota2</span> <span class="o">+</span> <span class="n">nota3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
+    <span class="k">return</span> <span class="n">promedio</span>
+
+<span class="n">promedio</span> <span class="o">=</span> <span class="n">calcular_promedio</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">promedio</span><span class="p">)</span>  <span class="c1"># 8.0</span>
+</pre></div>
+</div>
+</section>
+<section id="ejercicios">
+<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Crea una función que reciba un número y devuelva su doble</p></li>
+<li><p>Crea una función que reciba dos números y devuelva el mayor</p></li>
+<li><p>Crea una función que reciba tu nombre y edad, y imprima un mensaje</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2025, BELLIDO.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
