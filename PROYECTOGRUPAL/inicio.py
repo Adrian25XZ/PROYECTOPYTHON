@@ -2,7 +2,7 @@ def contar ():
 
     libreria[
         
-        libros{}
+        libros{"ddd"}
         
         
     ]
