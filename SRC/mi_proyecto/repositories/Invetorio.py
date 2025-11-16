@@ -1,0 +1,59 @@
+from abc import ABC, abstractmethod
+from typing import list, optional, Dict
+from ..models.producto import Producto, Categoria
+
+class IRepositorio(ABC):
+    
+    @abstractmethod
+    def agregar(self, producto: Producto) -> bool:
+        
+        pass
+    @abstractmethod
+    def obtener(self, id_producto: Producto) -> bool:
+        
+        pass
+    @abstractmethod
+    def obtener_todos(self) -> list[Producto]:
+        
+        pass
+    @abstractmethod
+    def eliminar(self, id_producto: int) -> bool:
+        
+        pass
+    
+class RepositorioMemoria(IRepositorio):
+    
+    def __init__(self):
+        self._productos: Dict[int, Producto] = {}
+        
+    def agregar(self, producto: Producto) -> bool:
+    
+        if producto.id_producto in self.productos:
+            raise ValueError(f'El producto con ID {producto.id_producto} ya existe')
+        self._productos[producto.id_producto] = producto
+        return True
+
+    def obtener(self, id_producto: int) -> Optional[Producto]:
+    
+        return self._productos.get(id_producto)
+    
+    def obtener_todos(self) -> list[Producto]:
+    
+        return list(self.productos.values())
+
+    def obtener_por_categoria(self, categoria: Categoria) -> list[Producto]:
+        
+        return [p for p in self.productos.values() if p.categoria == Categoria]
+    
+class Inventario:
+    
+    def __init__(self, repositorio: IRepositorio):
+        
+        self.repositorio = repositorio
+        
+    def agregar_producto(self, nombre: str, descripcion: str, precio: float, cantidad: int, categoria: Categoria) ->Producto:
+        
+        producto = self.repositorio.obtener(id_producto)
+        
+        if not producto:
+            raise ValueError(f'producto con ID {id_producto} no existe')
