@@ -1,11 +1,5 @@
-def contar ():
+#ff
 
-    libreria[
-        
-        libros{"ddd"}
-        
-        
-    ]
+print(6+3)
 
-
-    return (0)
+print(10//3)
