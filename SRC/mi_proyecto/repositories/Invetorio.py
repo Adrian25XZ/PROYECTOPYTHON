@@ -53,7 +53,30 @@ class Inventario:
         
     def agregar_producto(self, nombre: str, descripcion: str, precio: float, cantidad: int, categoria: Categoria) ->Producto:
         
+        producto = Producto(nombre, descripcion, precio, cantidad, categoria)
+        self.repositorio.agregar(producto)
+        return producto
+        
+    def aumentar_stock(self, id_producto: int, cantidad: int) -> bool:
+            
         producto = self.repositorio.obtener(id_producto)
         
         if not producto:
             raise ValueError(f'producto con ID {id_producto} no existe')
+        
+        producto.actualizar_cantidad(producto.cantidad + cantidad)
+        return True
+    
+    def disminuir_stock(self, id_producto: int, cantidad: int) -> bool:
+        producto = self.repositorio.obtener(id_producto)
+        if not producto:
+            raise ValueError(f'Producto con id {id_producto} no existe')
+        
+        if producto.cantidad < cantidad:
+            raise ValueError(f'stock insuficiente. disponible: {producto.cantidad}')
+        
+        producto.actualizar_cantidad(producto.cantidad - cantidad)
+        return True
+    
+    def obtener_productos_bajo_stock(self, limite: int = 10) -> List[Producto]:
+        return[p for p in self.repositorio.obtener_todos() if p.cantidad <= limite]
