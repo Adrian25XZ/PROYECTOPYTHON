@@ -3,17 +3,17 @@ from enum import Enum
 
 class Categoria(Enum):
     
-    PANTALONES = 'pantalones'
-    CHOMPAS = 'chompas'
-    POLOS = 'polos'
-    CAMISAS = 'camisas'
-    
+    ELECTRONICA = 'Electronica'
+    ALIMENTOS = 'Alimentos'
+    ROPA = 'Ropa'
+    LIBROS = 'libros'
+    OTROS = 'Otros'
     
 class Producto:
     
     _contador = 1000
     
-    def __init__(self, nombre: str, descripcion: str, talla: str, precio: float, cantidad: int, categoria: Categoria):
+    def __init__(self, nombre: str, descripcion: str, precio: float, cantidad: int, categoria: Categoria):
         
         if not nombre or not nombre.strip():
             raise ValueError('El nombre no puede estar vacio')
@@ -23,11 +23,9 @@ class Producto:
             raise ValueError('la cantidad no puede ser negativa')
         
         Producto._contador += 1
-        
         self.id_producto = Producto._contador
         self.nombre = nombre.strip()
         self.descripcion = descripcion.strip()
-        self.talla = talla.strip()
         self.precio = precio
         self.cantidad = cantidad
         self.categoria = categoria

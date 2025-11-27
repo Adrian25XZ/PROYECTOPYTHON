@@ -36,11 +36,6 @@ class GenerarReportes:
             'valor_total': self.valor_total_invetario(),
             'producto_mas_caro': self.producto_mas_caro(),
             'producto_mas_barato': self.productos_mas_baratos(),
-            'productos_bajo_stock': self.inventario.obtener_
-            
-            
-            
-            
-            
+            'productos_bajo_stock': self.inventario.obtener_productos_bajo_stock()
             
         }
