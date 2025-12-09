@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional, Dict
-from ..models import Producto, Categoria
+from ..models.producto import Producto, Categoria
 
 class IRepositorio(ABC):
     

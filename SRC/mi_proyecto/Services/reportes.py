@@ -1,6 +1,6 @@
 from typing import list, Dict, Any, Opcional
 from datetime import datetime
-from ..models import Producto
+from ..models.producto import Producto
 from ..repositories import Inventario
 
 
