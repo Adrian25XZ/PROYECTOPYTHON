@@ -4,8 +4,8 @@ Aplicacion Interactiva para gestionar productos
 '''
 
 from src.mi_proyecto.models.producto import Categoria, Producto
-from src.mi_proyecto.repositories.inventario import RepositorioMemoria, Inventario
-from src.mi_proyecto.services.reportes import GeneradorReportes
+from src.mi_proyecto.repositories.inventario import Inventario, RepositorioMemoria
+from src.mi_proyecto.services.reportes import GenerarReportes
 from src.mi_proyecto.utils.validadores import Validadores
 from src.mi_proyecto.utils.formatters import Formateadores
 
@@ -18,7 +18,7 @@ class AplicacionInventario:
         
         self.repositorio = RepositorioMemoria()
         self.inventario = Inventario(self.repositorio)
-        self.reportes = GeneradorReportes(self.inventario)
+        self.reportes = GenerarReportes(self.inventario)
         
     def mostrar_menu_principal(self):
         '''' Muestra el menu principal '''

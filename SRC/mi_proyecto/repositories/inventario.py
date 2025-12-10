@@ -28,7 +28,7 @@ class RepositorioMemoria(IRepositorio):
         
     def agregar(self, producto: Producto) -> bool:
     
-        if producto.id_producto in self.productos:
+        if producto.id_producto in self._productos:
             raise ValueError(f'El producto con ID {producto.id_producto} ya existe')
         self._productos[producto.id_producto] = producto
         return True
@@ -39,11 +39,11 @@ class RepositorioMemoria(IRepositorio):
     
     def obtener_todos(self) -> list[Producto]:
     
-        return list(self.productos.values())
+        return list(self._productos.values())
 
     def obtener_por_categoria(self, categoria: Categoria) -> list[Producto]:
         
-        return [p for p in self.productos.values() if p.categoria == Categoria]
+        return [p for p in self._productos.values() if p.categoria == categoria]
     
 class Inventario:
     
