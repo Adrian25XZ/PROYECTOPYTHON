@@ -118,4 +118,25 @@ class AplicacionInventario:
                     break
                 else:
                     print('\nERROR - opcion invalida')
-                    
+                
+    def _cargar_datos_prueba(self):
+        '''Carga datos de prueba en el inventario'''
+        
+        productos_prueba = [
+            ('Laptop', 'Laptop HP Core i7', 899.99, 5, Categoria.ELECTRONICA),
+            ('Mouse', 'Mouse inalambrico', 25.50, 50, Categoria.ELECTRONICA),
+            ('Telcado', 'Teclado mecanico', 120.00, 15, Categoria.ELECTRONICA),
+            ('Pan', 'Pan blanco artesanal', 3.50, 100, Categoria.ALIMENTOS),
+            ('Queso', 'Queso fresco', 12.00, 30, Categoria.ALIMENTOS),
+            ('Camiseta', 'Camiseta de algodon', 45.00, 20, Categoria.ROPA),
+            ('Python pro', 'Libro de Python avanzado', 89.99, 8, Categoria.LIBROS),
+        ]
+        
+        for nombre, descripcion, precio, cantidad, categoria in productos_prueba:
+            self.inventario.agregar_producto(nombre, descripcion, precio, cantidad, categoria)
+            
+            print('OK - Datos de prueba cargados')
+            
+if __name__ == '__main__':
+    app = AplicacionInventario()
+    app.ejecutar()
