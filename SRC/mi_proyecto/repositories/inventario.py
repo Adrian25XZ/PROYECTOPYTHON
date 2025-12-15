@@ -40,6 +40,13 @@ class RepositorioMemoria(IRepositorio):
     def obtener_todos(self) -> list[Producto]:
     
         return list(self._productos.values())
+    
+    def eliminar(self, id_producto: int) -> bool:
+        
+        if id_producto in self._productos:
+            del self._productos[id_producto]
+            return True
+        return False
 
     def obtener_por_categoria(self, categoria: Categoria) -> list[Producto]:
         
@@ -67,7 +74,7 @@ class Inventario:
         producto.actualizar_cantidad(producto.cantidad + cantidad)
         return True
     
-    def disminuir_stock(self, id_producto: int, cantidad: int) -> bool:
+    def disminuir_stock_interactivo(self, id_producto: int, cantidad: int) -> bool:
         producto = self.repositorio.obtener(id_producto)
         if not producto:
             raise ValueError(f'Producto con id {id_producto} no existe')

@@ -36,7 +36,7 @@ class Formateadores:
         
         if reporte['producto_mas_caro']:
             output += f'Producto Mas Caro: {reporte['producto_mas_caro'].nombre}'
-            output += f'(${reporte['Producto_mas_caro'].precio:.2f})\n'
+            output += f'(${reporte['producto_mas_caro'].precio:.2f})\n'
             
         if reporte['producto_mas_barato']:
             output += f'Producto Mas Barato: {reporte['producto_mas_barato'].nombre}'

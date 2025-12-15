@@ -20,7 +20,7 @@ class AplicacionInventario:
         self.inventario = Inventario(self.repositorio)
         self.reportes = GenerarReportes(self.inventario)
         
-    def mostrar_menu_principal(self):
+    def mostrar_menu_principal(self) -> str:
         '''' Muestra el menu principal '''
         print('\n' + '=' * 50)
         print('........SISTEMA DE GESTION DE INVENTARIO')
@@ -59,18 +59,18 @@ class AplicacionInventario:
             cat_str = input('categoria:')
             categoria = Categoria[cat_str.upper().replace(' ', '_')]
             
-            producto = self.inventario.agregar_producto(nombre. descripcion, precio, cantidad, categoria)
+            producto = self.inventario.agregar_producto(nombre, descripcion, precio, cantidad, categoria)
             print(f'\nProducto agregado: {producto}')
             
         except(ValueError, KeyError) as e:
             print(f'Error: {e}')
             
-        def ver_todos_productos(self):
+    def ver_todos_productos(self):
             '''Muestra todos los productos'''
             productos = self.repositorio.obtener_todos()
             print(Formateadores.formatear_lista_productos(productos))
             
-        def aumentar_stock_interactivo(self):
+    def aumentar_stock(self):
             '''Aumenta el stock de un producto'''
             
             try:
@@ -83,18 +83,30 @@ class AplicacionInventario:
             except(ValueError, KeyError) as e:
                 print(f'Error: {e}')
                 
-        def ver_bajo_stock(self):
+    def disminuir_stock_interactivo(self):
+            '''Disminuye el stock de un producto (simula venta)'''
+            try:
+                id_prod = int(input('\nID del producto:'))
+                cantidad = int(input('cantidad vendida:'))
+                
+                self.inventario.disminuir_stock(id_prod, cantidad)
+                print('Ok - Venta registrada exitosamente')
+
+            except(ValueError, KeyError) as e:
+                print(f'ERROR: {e}')
+                
+    def ver_bajo_stock(self):
             '''Muestra productos con bajo stock'''
             limite = int(input('\nLimite de stock bajo(default 10):') or '10')
             productos = self.inventario.obtener_productos_bajo_stock(limite)
             print(Formateadores.formatear_lista_productos(productos))
             
-        def ver_reporte(self):
+    def ver_reporte(self):
             '''Muestra el reporte completo'''
             reporte = self.reportes.reporte_completo()
             print(Formateadores.formatear_reporte(reporte))
             
-        def ejecutar(self):
+    def ejecutar(self):
             '''Ejecuta la aplicacion principal'''
             self._cargar_datos_prueba()
             
@@ -106,7 +118,7 @@ class AplicacionInventario:
                 elif opcion == '2':
                     self.ver_todos_productos()
                 elif opcion == '3':
-                    self.aumentar_stock_interactivo()
+                    self.aumentar_stock()
                 elif opcion == '4':
                     self.disminuir_stock_interactivo()
                 elif opcion == '5':

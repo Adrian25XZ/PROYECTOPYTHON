@@ -21,7 +21,7 @@ class Validadores:
     
     @staticmethod
     def validar_nombre_no_vacio(nombre: str) -> bool:
-        if not isinstance(nombre. str):
+        if not isinstance(nombre, str):
             raise ValueError('el nombre debe ser texto')
         if not nombre or not nombre.strip():
             raise ValueError('el nombre no puede estar vacio')
